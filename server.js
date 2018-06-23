@@ -55,6 +55,14 @@ app.get('/home',(req,res) => {
   });
 });
 
+app.get('/project',(req,res) => {
+  res.render('project.hbs',{
+    pageTitle:'This is my portfolio',
+    Message:'Together we can do great things, stay in touch!!!',
+    currentYear: new Date().getFullYear()
+  });
+});
+
 app.get('/menu',(req,res) => {
   res.send('<h1>Here is the menu</h1>');
 });
